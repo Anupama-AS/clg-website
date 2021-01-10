@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  padding-top: 50%;
 }
 
 .App-logo {
@@ -37,7 +36,6 @@
     transform: rotate(360deg);
   }
 }
-
-.paper{
-  border-radius: 50%;
+.table{
+  padding: 10%;
 }

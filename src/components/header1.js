@@ -1,18 +1,17 @@
 import React from 'react';
 import { AppBar } from "@material-ui/core";
-import { Button,Toolbar } from "@material-ui/core";
+import { Toolbar } from "@material-ui/core";
 //import {Typography } from "@material-ui/core"
-import SchoolSharpIcon from '@material-ui/icons/SchoolSharp';
+//import SchoolSharpIcon from '@material-ui/icons/SchoolSharp';
 import { makeStyles } from '@material-ui/styles';
 import Box from '@material-ui/core/Box';
 
-
-const useStyles = makeStyles(()=>({
+const useStyles =makeStyles(()=>({
     buttonstyles:{
         color:"rgb(255,255,255)",
-        borderRadius: "30px",
+        borderRadius: "15px",
         backgroundColor:"rgb(247, 19, 2)",
-        width:"100px",
+        width:"90px",
         display:"flex",
         alignContent:"spaceAround",
         justifyContent:"spaceAround"
@@ -20,51 +19,45 @@ const useStyles = makeStyles(()=>({
     },
     appbarstyles:{
         backgroundColor:"rgb(209, 57, 46)",
-        height:"60px",
-    },
-    iconstyles:{
-      height:"100px",
+        width:650,
+        height:60,
+        marginTop:-30,
+        marginLeft:350,
+        marginBottom:150,
+        borderRadius:15,
     }
-    
 }));
 
-const Header =  ()=> {
-    const classes = useStyles();
-        return ( 
-            <AppBar position="static" className={classes.appbarstyles} >
-                <Toolbar>
-                    <SchoolSharpIcon className={classes.iconstyles} ></SchoolSharpIcon>
+const Header1 =()=>{
+    const classes= useStyles();
+    return(
+        <AppBar position="static" className={classes.appbarstyles}>
+            <Toolbar>
                     <div style={{ width: '100%' }}>
                       <Box display="flex" flexDirection="row" justifyContent="space-around" p={1} m={1} bgcolor="rgb(209, 57, 46)" >
                         <Box p={1} >
-                          Home
+                        Overview
                         </Box>
                         <Box p={1} >
-                          Leadership
+                          Programmes
                         </Box>
                         <Box p={1} >
-                          Academics
+                          Faculty
                         </Box>
                         <Box p={1} >
-                           Important Documents
+                          Research
                         </Box>
                         <Box p={1} >
-                           TEQUIP
-                        </Box>
-                        <Box p={1} >
-                          Placements
-                        </Box>
-                        <Box p={1} >
-                          Examinations
+                           Achievements
                         </Box>
                         <Box p={1} bgcolor="rgb(209, 57, 46)">
-                          Events
+                          Alumini
                         </Box>
                       </Box>
                     </div>
-                    <Button variant="contained" color="inherit" className={classes.buttonstyles}>Login</Button>
                 </Toolbar>
             </AppBar>
          );
     } 
-export default Header;
+export default Header1;
+       

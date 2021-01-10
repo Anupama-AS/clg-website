@@ -1,22 +1,35 @@
-import './App.css';
 import React from 'react';
-//mport AIT from './components/AIT.jpg';
+import AIT from './components/AIT.jpg';
 import Grid from '@material-ui/core/Grid';
 import Header from './components/header';
 import Footer from './components/footer';
-import Management from './components/management';
+import Research from './components/research';
+import Header1 from './components/header1';
 
 
-export default function App() {
+
+function App() {
   return (
     <div>
-      <Header/>
+      <Header />
       <Grid container direction="column" >
-        
+        <Grid item><img src={AIT} width="100%" height="300" alt="college" />
+        <div style={{
+          position:'absolute',
+          color:'white',
+          top:200,
+          left:'50%',
+          fontSize: 40,
+          transform:'translateX(-50%)'
+        }}>Computer Science and Engineering
+        </div>
+        </Grid>
+        <Header1/>
       </Grid>
-      <Management/>
-      <Footer/>
+      <Research />
+      <Footer />
     </div>
   );
 }
 
+export default App;
